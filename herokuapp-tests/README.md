@@ -2,7 +2,7 @@
 
 ## 📌 Project Overview
 
-This project demonstrates **manual, automated, and continuous integration of automated Selenium tests** in **Python and Java**, using **GitHub Actions**** for [The Internet – HerokuApp](https://the-internet.herokuapp.com/), a demo site with diverse UI components.
+This project demonstrates**manual, automated, and continuous integration of tests** in **Python and Java**, using **GitHub Actions**** fo r [The Internet – HerokuApp](https://the-internet.herokuapp.com/), a demo site with diverse UI components.
 
 ---
 
@@ -10,18 +10,17 @@ This project demonstrates **manual, automated, and continuous integration of aut
 
 * **Manual Testing:** Functional test cases for UI components (alerts, dropdowns, file uploads, dynamic elements)
 * **Automation:** Selenium WebDriver scripts in **Python** and **Java**
+* **CI/CD Integration:**
+
+  * Run **Python + Java Selenium tests** automatically on push or pull requests
+  * Generate **test reports** and optionally capture screenshots
+  * Demonstrate **real-world QA workflow** with CI/CD
 * **Test Coverage:**
 
     * Alerts & confirmation dialogs
     * Dropdown selection
     * File upload & downloads
     * Dynamic controls & visibility
-
-* **CI/CD Integration:** 
-    * Run **Python + Java Selenium tests** automatically on push or pull requests
-    * Generate **test reports** and optionally capture screenshots
-    * Demonstrate **real-world QA workflow** with CI/CD
-
 ---
 
 ## 📂 Project Structure
@@ -56,7 +55,6 @@ herokuapp-tests/
 │       └── pom.xml                 # Maven configuration file (dependencies, build settings, plugins)
 └── README.md                       # Project documentation and instructions
 ```
-
 ---
 
 ## 🛠 Tech Stack
@@ -69,7 +67,15 @@ herokuapp-tests/
 
 ---
 
-## 🚀 How to Run
+## 🚀 How to Run Tests
+
+
+### 🔹 Clone this repo
+
+   ```bash
+   git clone https://github.com/<your-username>/qa-portfolio.git
+   cd qa-portfolio/saucedemo-tests/automation
+   ```
 
 ### 🔹 Python Tests
 
@@ -90,17 +96,4 @@ OR IT COULD BE THIS WAY:
 * Python tests: `pytest python-tests/tests --html=report.html`
 * Java tests: `mvn -f java-tests/pom.xml clean test`
 * Workflow triggers automatically on GitHub Actions when code is pushed
----
-
-## 🎯 Learning Goals
-
-* Test diverse UI elements
-* Write modular automation scripts
-* Apply Page Object Model in multiple languages
-* Document test cases professionally
-* Integrate automated tests into CI/CD pipelines
-* Run multi-language automation workflows
-* Handle reporting and notifications
-* Prepare for real-world QA environments
-
 ---

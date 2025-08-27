@@ -1,6 +1,6 @@
 # 🧪 QA Automation Portfolio
 
-Welcome! This repository showcases my **QA skills in both manual and automated testing**, using **Python + Selenium, Java + Selenium**, and demonstrating **CI/CD integration**.
+Welcome! This repository showcases my **QA skills in both manual and automated testing**, using **Python + Selenium, Java + Selenium**, and continuos **CI/CD integration**.
 
 This portfolio highlights:
 
@@ -62,6 +62,16 @@ This portfolio highlights:
 
 ---
 
-✨ I’m actively seeking opportunities as a **QA Engineer / Automation Tester**. Feel free to explore my projects and reach out!
+## 👤 About Me
+
+✨ I’m actively seeking opportunities as a **QA Engineer / Automation Tester**. Feel free to explore my projects and reach out!  
+
+This project showcases my ability to:
+
+* Design clear and effective test cases
+* Write reliable Selenium automation in Python + Java
+* Organize code into reusable frameworks (Page Object Model)
+* Communicate test results clearly through reports
+* Integrate tests into a CI/CD pipeline with GitHub Actions for real-world workflows
 
 ---
