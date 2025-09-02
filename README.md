@@ -53,25 +53,25 @@ This portfolio highlights:
 
 ---
 
-## 🎯 Why This Portfolio Stands Out
-
-* Demonstrates **manual + automation testing**
-* Shows **cross-language expertise** (Python + Java)
-* Includes **CI/CD Integration**, simulating real team workflows
-* Organized, professional, and easy for recruiters to explore
-
----
-
 ## 👤 About Me
 
-✨ I’m actively seeking opportunities as a **QA Engineer / Automation Tester**. Feel free to explore my projects and reach out!  
+✨ I’m actively seeking opportunities as a **QA Engineer / SDET (Software Development Engineer in Test) / Automation Tester**.  
+Feel free to explore my projects and reach out!
 
-This project showcases my ability to:
+These projects showcases my ability to:
 
 * Design clear and effective test cases
-* Write reliable Selenium automation in Python + Java
-* Organize code into reusable frameworks (Page Object Model)
-* Communicate test results clearly through reports
-* Integrate tests into a CI/CD pipeline with GitHub Actions for real-world workflows
+* Write reliable Selenium automation in **Python + Java**
+* Organize code into **reusable frameworks** (Page Object Model)
+* Communicate test results clearly through **reports & dashboards**
+* Integrate tests into a **CI/CD pipeline** with GitHub Actions for real-world workflows
+* Apply **developer-level practices** (version control, debugging, OOP) in a testing context
 
 ---
+
+## 💡 Why Hire Me
+
+* Hands-on practical experience: not just theory, fully runnable automation scripts
+* Quick learner & adaptable: ready to work with different languages and workflows
+* Professional presentation: clean, well-documented GitHub projects
+* QA mindset: attention to detail, thinking through edge cases, quality-driven approach

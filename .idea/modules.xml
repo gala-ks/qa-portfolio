@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/herokuapp-tests/automation/python/herokuapp-python.iml" filepath="$PROJECT_DIR$/herokuapp-tests/automation/python/herokuapp-python.iml" />
+      <module fileurl="file://$PROJECT_DIR$/herokuapp-tests/selenium-automation/python/herokuapp-python.iml" filepath="$PROJECT_DIR$/herokuapp-tests/selenium-automation/python/herokuapp-python.iml" />
       <module fileurl="file://$PROJECT_DIR$/ci-cd-demo/python-tests/python-tests.iml" filepath="$PROJECT_DIR$/ci-cd-demo/python-tests/python-tests.iml" />
-      <module fileurl="file://$PROJECT_DIR$/saucedemo-tests/automation/python/saucedemo-python.iml" filepath="$PROJECT_DIR$/saucedemo-tests/automation/python/saucedemo-python.iml" />
+      <module fileurl="file://$PROJECT_DIR$/saucedemo-tests/selenium-automation/python/saucedemo-python.iml" filepath="$PROJECT_DIR$/saucedemo-tests/selenium-automation/python/saucedemo-python.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/workspace.iml" filepath="$PROJECT_DIR$/.idea/workspace.iml" />
     </modules>
   </component>

@@ -2,7 +2,8 @@
 
 ## 📌 Project Overview
 
-This project demonstrates **manual, automated, and continuous integration of tests** in **Python and Java**, using **GitHub Actions**** for the [SauceDemo](https://www.saucedemo.com/) e-commerce demo application.
+This project demonstrates **manual, automated, and continuous integration for tests** in **Python and Java**,   
+using **GitHub Actions**** for the [SauceDemo](https://www.saucedemo.com/) e-commerce demo application.
 
 ---
 
@@ -37,7 +38,7 @@ saucedemo-tests/
 │                                   # - Sends Slack/email notifications if any tests fail
 ├── manual-tests/
 │   └── test-cases.xlsx             # Written manual test cases for reference and validation
-├── automation/
+├── selenium-automation/
 │   ├── python/
 │   │   ├── pages/                  # Python Page Object Model classes
 │   │   ├── tests/                  # Python test scripts

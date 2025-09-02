@@ -3,9 +3,9 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/ci-cd-demo/java-tests/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ci-cd-demo/java-tests/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/herokuapp-tests/automation/java/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/herokuapp-tests/automation/java/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/saucedemo-tests/automation/java/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/saucedemo-tests/automation/java/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/herokuapp-tests/selenium-automation/java/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/herokuapp-tests/selenium-automation/java/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/saucedemo-tests/selenium-automation/java/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/saucedemo-tests/selenium-automation/java/src/main/resources" charset="UTF-8" />
   </component>
 </project>

@@ -2,7 +2,8 @@
 
 ## 📌 Project Overview
 
-This project demonstrates**manual, automated, and continuous integration of tests** in **Python and Java**, using **GitHub Actions**** fo r [The Internet – HerokuApp](https://the-internet.herokuapp.com/), a demo site with diverse UI components.
+This project demonstrates**manual, automated, and continuous integration for tests** in **Python and Java**,   
+using **GitHub Actions**** for The [Internet – HerokuApp](https://the-internet.herokuapp.com), a demo site with diverse UI components.
 
 ---
 
@@ -38,7 +39,7 @@ herokuapp-tests/
 │                                   # - Sends Slack/email notifications if any tests fail
 ├── manual-tests/
 │   └── test-cases.xlsx             # Written manual test cases for reference and validation
-├── automation/
+├── selenium-automation/
 │   ├── python/
 │   │   ├── pages/                  # Python Page Object Model classes
 │   │   ├── tests/                  # Python test scripts
