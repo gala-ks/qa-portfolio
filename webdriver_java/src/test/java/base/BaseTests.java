@@ -2,8 +2,7 @@ package base;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
+import org.testng.annotations.*;
 import pages.HomePage;
 
 /**
@@ -14,7 +13,7 @@ public abstract class BaseTests
     private WebDriver driver;
     protected HomePage homePage;
 
-    @BeforeClass
+    @BeforeMethod
     public void setUp() {
 
         driver = new ChromeDriver();
@@ -37,7 +36,7 @@ public abstract class BaseTests
 //        }
     }
 
-    @AfterClass
+    @AfterMethod
     public void tearDown() {
 
         // Closes window and session vs. driver.close() that leaves sesssion open.
