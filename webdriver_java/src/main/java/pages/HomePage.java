@@ -11,9 +11,9 @@ public class HomePage {
         this.driver = driver;
     }
 
-    public LoginPage clickFormAuth() {
+    public FormAuthPage clickFormAuth() {
         clickLink("Form Authentication");
-        return new LoginPage(driver);
+        return new FormAuthPage(driver);
     }
 
     public DropdownPage clickDropdown() {
@@ -29,6 +29,11 @@ public class HomePage {
     public HoversPage clickHovers() {
         clickLink("Hovers");
         return new HoversPage(driver);
+    }
+
+    public KeyPressesPage clickKeyPresses() {
+        clickLink("Key Presses");
+        return new KeyPressesPage(driver);
     }
 
     private void clickLink(String linkText){

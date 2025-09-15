@@ -3,7 +3,7 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class LoginPage {
+public class FormAuthPage {
 
     private final WebDriver driver;
     private final By usernameField = By.id("username");
@@ -11,7 +11,7 @@ public class LoginPage {
     private final By loginButton = By.cssSelector("#login button");
 
 
-    public LoginPage(WebDriver driver) {
+    public FormAuthPage(WebDriver driver) {
         this.driver = driver;
     }
 
