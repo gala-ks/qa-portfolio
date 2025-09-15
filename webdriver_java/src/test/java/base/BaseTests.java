@@ -9,7 +9,7 @@ import pages.HomePage;
 /**
  * JUnit 5
  */
-public class BaseTests
+public abstract class BaseTests
 {
     private WebDriver driver;
     protected HomePage homePage;
@@ -42,10 +42,5 @@ public class BaseTests
 
         // Closes window and session vs. driver.close() that leaves sesssion open.
         driver.quit();
-    }
-
-    public static void main(String[] arg){
-        BaseTests test = new BaseTests();
-        test.setUp();
     }
 }

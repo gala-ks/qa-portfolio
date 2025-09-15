@@ -8,8 +8,10 @@ import org.openqa.selenium.interactions.Actions;
 public class HoversPage {
 
     private final WebDriver driver;
-    private By figureBox = By.className("figure");
-    private By boxCaption = By.className("figcaption");
+
+    // Locators
+    private final By figureBox = By.className("figure");
+    private final By boxCaption = By.className("figcaption");
 
     public HoversPage(WebDriver driver) {
         this.driver = driver;
@@ -18,21 +20,30 @@ public class HoversPage {
     /**
      * @param index starts at 1 but the List index starts with 0
      */
-    public FigureCaption hoverOverFIgure(int index) {
+    public FigureCaption hoverOverFigure(int index) {
         WebElement figure = driver.findElements(figureBox).get(index - 1);
 
-        // Actions class uses Building pattern - chaining multiple methods and executing them at once
+        // Actions class uses Building pattern - chaining multiple methods and
+        // executing them at once by calling .perform();
         Actions actions = new Actions(driver);
         actions.moveToElement(figure).perform();
 
+        // Find a child element from a parent
         return new FigureCaption(figure.findElement(boxCaption));
     }
 
+    /**
+     * This class covers the following Web Element:
+     * <div class="figcaption">
+     *      <h5>name: user2</h5>
+     *      <a href="/users/2">View profile</a>
+     * </div>
+     */
     public class FigureCaption{
 
-        private WebElement caption;
-        private By header = By.tagName(("h5"));
-        private By link = By.tagName("a");
+        private final WebElement caption;
+        private final By header = By.tagName(("h5"));
+        private final By link = By.tagName("a");
 
         public FigureCaption(WebElement caption) {
             this.caption = caption;
