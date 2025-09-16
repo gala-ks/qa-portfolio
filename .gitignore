@@ -2,3 +2,4 @@
 /saucedemo-tests/selenium-automation/java/target/
 /webdriver_java/target/
 .idea/
+*.iml
