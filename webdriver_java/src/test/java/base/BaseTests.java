@@ -13,12 +13,12 @@ public abstract class BaseTests
     private WebDriver driver;
     protected HomePage homePage;
 
-    @BeforeMethod
+    @BeforeClass
     public void setUp() {
 
         driver = new ChromeDriver();
+        goHome();
 
-        driver.get("https://the-internet.herokuapp.com/");
         homePage = new HomePage(driver);
 
 //        driver.manage().window().setSize(new Dimension(375, 667));
@@ -36,7 +36,12 @@ public abstract class BaseTests
 //        }
     }
 
-    @AfterMethod
+    @BeforeMethod
+    public void goHome() {
+        driver.get("https://the-internet.herokuapp.com/");
+    }
+
+    @AfterClass
     public void tearDown() {
 
         // Closes window and session vs. driver.close() that leaves sesssion open.

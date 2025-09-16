@@ -36,6 +36,26 @@ public class HomePage {
         return new KeyPressesPage(driver);
     }
 
+    public HorizontalSliderPage clickHorizontalSlider() {
+        clickLink("Horizontal Slider");
+        return new HorizontalSliderPage(driver);
+    }
+
+    public JavaScriptAlertsPage clickJavaScriptAlerts() {
+        clickLink("JavaScript Alerts");
+        return new JavaScriptAlertsPage(driver);
+    }
+
+    public FileUploadPage clickFileUpload() {
+        clickLink("File Upload");
+        return new FileUploadPage(driver);
+    }
+
+    public ContextMenuPage clickContextMenu() {
+        clickLink("Context Menu");
+        return new ContextMenuPage(driver);
+    }
+
     private void clickLink(String linkText){
         driver.findElement(By.linkText(linkText)).click();
     }
