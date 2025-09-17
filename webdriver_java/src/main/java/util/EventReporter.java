@@ -10,4 +10,13 @@ public class EventReporter implements WebDriverListener{
         System.out.println("Clicking on: " + element.getText());
     }
 
+    @Override
+    public void beforeSendKeys(WebElement element, CharSequence... keysToSend) {
+        System.out.println("Typing in : " + String.join("", keysToSend));
+    }
+
+    @Override
+    public void beforeIsDisplayed(WebElement element) {
+        System.out.println("Checking visibility of: " + element.getText());
+    }
 }
