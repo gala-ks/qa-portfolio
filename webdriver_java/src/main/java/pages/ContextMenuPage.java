@@ -16,9 +16,10 @@ public class ContextMenuPage {
 
     public void rightClickBox() {
         WebElement hotSpot = driver.findElement(box);
+        // Could be done this way:
 //      new Actions(driver).moveToElement(hotSpot).contextClick().perform();
 
-        // Could also be done this way:
+        // Or this way:
         new Actions(driver).contextClick(hotSpot).perform();
     }
 
