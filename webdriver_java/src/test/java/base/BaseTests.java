@@ -19,8 +19,7 @@ import java.io.File;
 import java.io.IOException;
 import java.time.Duration;
 
-public abstract class BaseTests
-{
+public abstract class BaseTests {
     private WebDriver driver;
     private WebDriver decorated;
     protected HomePage homePage;
@@ -31,27 +30,29 @@ public abstract class BaseTests
         driver = new ChromeDriver();
 
         /*
-            Replace the driver with a decorated driver that uses an event listener to log actions.
-            This is a new way to do it in Selenium 4.0+
-            See util/EventReporter.java for the event listener class.
-            I'm not using it in this project, but it's here to show how it works.
+          Replace the driver with a decorated driver that uses an event listener to log actions.
+          This is a new way to do it in Selenium 4.0+
+          See util/EventReporter.java for the event listener class.
+          I'm not using it in this project, but it's here to show how it works.
          */
-        decorated = new EventFiringDecorator(new EventReporter()).decorate(driver);
+        decorated = new EventFiringDecorator<>(new EventReporter()).decorate(driver);
 
         /*
           Set a default wait time for finding elements.
           It's better to use explicit waits, but this is included to show how it works.
           Implicit waits are set for the life of the WebDriver instance.
         */
-       driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+//       driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
         goHome();
-        homePage = new HomePage(driver);
+        homePage = new HomePage(decorated);
+//        homePage = new HomePage(driver);
     }
 
     @BeforeMethod
     public void goHome() {
-        driver.get("https://the-internet.herokuapp.com/");
+        decorated.get("https://the-internet.herokuapp.com/");
+//        driver.get("https://the-internet.herokuapp.com/");
     }
 
     @AfterClass
@@ -64,7 +65,7 @@ public abstract class BaseTests
     @AfterMethod
     public void recordFailure(ITestResult result) {
         if (ITestResult.FAILURE == result.getStatus()) {
-            var camera = (TakesScreenshot)driver;
+            var camera = (TakesScreenshot) driver;
             File screenshot = camera.getScreenshotAs(OutputType.FILE);
             try {
                 Files.move(screenshot, new File("resources/screenshots/" + result.getName() + ".png"));
@@ -77,9 +78,5 @@ public abstract class BaseTests
 
     public WindowNavigation getWindowNavigator() {
         return new WindowNavigation(driver);
-    }
-
-    public WebDriver getDecoratedDriver() {
-        return decorated;
     }
 }
