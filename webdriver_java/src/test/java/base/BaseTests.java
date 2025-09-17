@@ -31,12 +31,12 @@ public abstract class BaseTests
         driver = new ChromeDriver();
 
         /*
-            Replace the driver with a decorated driver that uses an event listener to log actions.
-            This is a new way to do it in Selenium 4.0+
-            See util/EventReporter.java for the event listener class.
-            I'm not using it in this project, but it's here to show how it works.
+          Replace the driver with a decorated driver that uses an event listener to log actions.
+          This is a new way to do it in Selenium 4.0+
+          See util/EventReporter.java for the event listener class.
+          I'm not using it in this project, but it's here to show how it works.
          */
-        decorated = new EventFiringDecorator(new EventReporter()).decorate(driver);
+        decorated = new EventFiringDecorator<>(new EventReporter()).decorate(driver);
 
         /*
           Set a default wait time for finding elements.
