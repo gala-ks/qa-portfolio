@@ -1,10 +1,12 @@
 package base;
 
 import com.google.common.io.Files;
+import org.openqa.selenium.Cookie;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.events.EventFiringDecorator;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterClass;
@@ -12,12 +14,12 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import pages.HomePage;
+import util.CookieManager;
 import util.EventReporter;
 import util.WindowNavigation;
 
 import java.io.File;
 import java.io.IOException;
-import java.time.Duration;
 
 public abstract class BaseTests {
     private WebDriver driver;
@@ -26,14 +28,16 @@ public abstract class BaseTests {
 
     @BeforeClass
     public void setUp() {
-
-        driver = new ChromeDriver();
+        /*
+            getChromeOptions() is a method created below that sets options for the Chrome browser.
+            You can modify it to set options for your needs.
+         */
+        driver = new ChromeDriver(getChromeOptions());
 
         /*
           Replace the driver with a decorated driver that uses an event listener to log actions.
           This is a new way to do it in Selenium 4.0+
           See util/EventReporter.java for the event listener class.
-          I'm not using it in this project, but it's here to show how it works.
          */
         decorated = new EventFiringDecorator<>(new EventReporter()).decorate(driver);
 
@@ -45,6 +49,7 @@ public abstract class BaseTests {
 //       driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
         goHome();
+        setCookie();
         homePage = new HomePage(decorated);
 //        homePage = new HomePage(driver);
     }
@@ -78,5 +83,29 @@ public abstract class BaseTests {
 
     public WindowNavigation getWindowNavigator() {
         return new WindowNavigation(driver);
+    }
+
+    public CookieManager getCookieManager() {
+        return new CookieManager(driver);
+    }
+
+    /*
+      Example of setting options for Chrome instance used during testing.
+     */
+    private ChromeOptions getChromeOptions() {
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("disable-infobars");
+
+        // Allows running Chrome in the background. Comment out to see the browser.
+        // Runs a little bit faster in headless mode.
+        options.addArguments("--headless=new");
+        return options;
+    }
+
+    private void setCookie() {
+        Cookie cookie = new Cookie.Builder("ChocolateChip", "tasty")
+                .domain("the-internet.herokuapp.com")
+                .build();
+        driver.manage().addCookie(cookie);
     }
 }
