@@ -56,4 +56,9 @@ public class ProductsPage {
 
         return Integer.parseInt(badgeElements.get(0).getText());
     }
+
+    public CartPage clickCartLink() {
+        driver.findElement(cartLink).click();
+        return new CartPage(driver);
+    }
 }
